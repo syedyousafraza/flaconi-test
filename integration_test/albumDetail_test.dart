@@ -19,16 +19,12 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(searchIcon);
     await tester.pumpAndSettle();
-
     var searchItems = find.text("Testament");
     expect(searchItems, findsOneWidget);
-
     await tester.tap(searchItems);
     await tester.pumpAndSettle();
-
     expect(find.text("British Steel"), findsOneWidget);
     expect(find.text("Testament Top Albums"), findsOneWidget);
-
     await tester.tap(find.text("British Steel"));
     await tester.pumpAndSettle();
     expect(find.text("Album"), findsOneWidget);
@@ -36,12 +32,10 @@ void main() {
     expect(find.text("Music App"), findsOneWidget);
     expect(find.text("British Steel Tracks:"), findsOneWidget);
     await tester.pumpAndSettle();
-    
-    final gesture =
-    await tester.startGesture(Offset(0, 300)); //Position of the scrollview
-    await gesture.moveBy(Offset(0, -300)); //How much to scroll by
-    await tester.pump();
 
+    final gesture = await tester.startGesture(Offset(0, 300));
+    await gesture.moveBy(Offset(0, -300));
+    await tester.pump();
     final backBtn = find.byTooltip("Back");
     await tester.tap(backBtn);
   });

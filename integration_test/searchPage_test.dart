@@ -24,9 +24,8 @@ void main() {
     //   expect(searchItems, findsOneWidget);
     //   await tester.pumpAndSettle();
 
-    final gesture =
-        await tester.startGesture(Offset(0, 300)); //Position of the scrollview
-    await gesture.moveBy(Offset(0, -300)); //How much to scroll by
+    final gesture = await tester.startGesture(Offset(0, 300));
+    await gesture.moveBy(Offset(0, -300));
     await tester.pump();
   });
 }
