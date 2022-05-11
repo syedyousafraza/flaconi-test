@@ -20,10 +20,6 @@ void main() {
     await tester.tap(searchIcon);
     await tester.pumpAndSettle();
 
-    //   var searchItems = find.text("Testament");
-    //   expect(searchItems, findsOneWidget);
-    //   await tester.pumpAndSettle();
-
     final gesture = await tester.startGesture(Offset(0, 300));
     await gesture.moveBy(Offset(0, -300));
     await tester.pump();

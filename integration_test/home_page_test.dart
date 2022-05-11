@@ -19,12 +19,5 @@ void main() {
     expect(searchIcon, findsOneWidget);
     await tester.tap(searchIcon);
     await tester.pumpAndSettle();
-//    await tester.enterText(searchField, 'Test');
-//    await tester.pumpAndSettle();
-
-//    await tester.tap(searchIcon);
-//    await tester.pumpAndSettle();
-//    var searchItems = find.text("Testament");
-//    expect(searchItems, findsOneWidget);
   });
 }
